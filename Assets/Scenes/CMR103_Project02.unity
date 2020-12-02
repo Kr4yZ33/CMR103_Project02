@@ -24146,7 +24146,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f7de0ad591205d24491202f3301d177d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.57
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -55825,7 +55825,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 88871175}
+      - m_Target: {fileID: 589333221}
         m_MethodName: UnPause
         m_Mode: 1
         m_Arguments:
