@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaypointRightEdgeController : MonoBehaviour
+public class WaypointLeftEdgeControllerC : MonoBehaviour
 {
     //public bool trainPassingTransform; // bool for if the train is passing the transform or not
+
     public AudioSource audioSource;
     public AudioClip edgeConnectionClip;
 
-    public Transform closestEdge;  // Reference to the closest edge from another tile next to this transform
-    public Transform right; // reference to the right edge transform of the track tile
+    public Transform closestEdge; // Reference to the closest edge from another tile next to this transform
+    public Transform centre; // reference to the right edge transform of the track tile
     public Transform left; // reference to the left edge transform of the track tile
 
     private void Start()
@@ -24,34 +25,32 @@ public class WaypointRightEdgeController : MonoBehaviour
             closestEdge = gameObject.transform;
         }
     }
-
     void OnTriggerEnter(Collider other)
     {
         //if (trainPassingTransform == true)
         //{
-            //return;
+        //return;
 
         //}
         if (other.CompareTag("Train"))
         {
-            
             TrainController script = other.gameObject.GetComponent<TrainController>();
 
-            if(script.previousTarget == null)
+            if (script.previousTarget == null)
             {
-                script.previousTarget = right;
-                script.currentTarget = left;
+                script.previousTarget = left;
+                script.currentTarget = centre;
             }
 
-            if (script.previousTarget != left)
+            if (script.previousTarget != centre)
             {
-                script.previousTarget = right;
-                script.currentTarget = left;
+                script.previousTarget = left;
+                script.currentTarget = centre;
                 //trainPassingTransform = true;
             }
-            if (script.previousTarget == left)
+            if (script.previousTarget == centre)
             {
-                script.previousTarget = right;
+                script.previousTarget = left;
                 script.currentTarget = closestEdge;
                 //trainPassingTransform = true;
             }
@@ -68,11 +67,12 @@ public class WaypointRightEdgeController : MonoBehaviour
     {
         //if (other.CompareTag("Train"))
         //{
-            //trainPassingTransform = false;
+        //trainPassingTransform = false;
         //}
         if (other.CompareTag("TrackEdge"))
         {
             closestEdge = null;
         }
+
     }
 }

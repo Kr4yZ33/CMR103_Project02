@@ -6,28 +6,28 @@ public class PlayerTrainingManager : MonoBehaviour
 {
     public GameObject leftTrackGap;
     public GameObject rightTrackGap;
+    public GameObject guideText;
 
-    // Start is called before the first frame update
-    void Start()
+    public AudioClip trainingAudioClip;
+    public AudioSource audioSource;
+
+    public void StartPlayerTraining()
     {
-        
+        EnableTrackGapGuides();
+        audioSource.PlayOneShot(trainingAudioClip);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void EnableTrackGapGuides()
+    
+    void EnableTrackGapGuides()
     {
         leftTrackGap.SetActive(true);
         rightTrackGap.SetActive(true);
+        guideText.SetActive(true);
     }
 
     public void DisableTrackGapGuides()
     {
         leftTrackGap.SetActive(false);
         rightTrackGap.SetActive(false);
+        guideText.SetActive(false);
     }
 }
