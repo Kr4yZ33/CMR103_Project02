@@ -316,6 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86ee1a10b42850140b2532268bbf11f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  edgeConnectionClip: {fileID: 8300000, guid: 03ef17d4f519a554e94d61e757c78288, type: 3}
   closestEdge: {fileID: 0}
   right: {fileID: 4983723199229553384}
   left: {fileID: 4983723199136035174}
@@ -393,6 +394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a874f21bdcd1bd4e816533dd9ebec75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  edgeConnectionClip: {fileID: 8300000, guid: 03ef17d4f519a554e94d61e757c78288, type: 3}
   closestEdge: {fileID: 0}
   right: {fileID: 4983723199229553384}
   left: {fileID: 4983723199136035174}

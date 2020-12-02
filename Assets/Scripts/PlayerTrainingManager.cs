@@ -7,13 +7,15 @@ public class PlayerTrainingManager : MonoBehaviour
     public bool leftEdgeConnected;
     public bool rightEdgeConnected;
     public bool trainingCompleted;
+    public bool missionCompleteClipPlayed;
 
     public GameObject leftTrackGap;
     public GameObject rightTrackGap;
     public GameObject guideText;
 
-    public AudioClip trainingAudioClip;
+    public AudioClip trainingCompletedAudioClip;
     public AudioSource audioSource;
+    public float volume = 0.5f;
 
     private void FixedUpdate()
     {
@@ -22,16 +24,22 @@ public class PlayerTrainingManager : MonoBehaviour
             FinishPlayerTraining();
         }
         
+        if(missionCompleteClipPlayed == true)
+        {
+            return;
+        }
+
         if(leftEdgeConnected == true && rightEdgeConnected == true)
         {
             trainingCompleted = true;
+            audioSource.PlayOneShot(trainingCompletedAudioClip, volume);
+            missionCompleteClipPlayed = true;
         }
     }
 
     public void StartPlayerTraining()
     {
         EnableTrackGapGuides();
-        audioSource.PlayOneShot(trainingAudioClip);
     }
     
     void EnableTrackGapGuides()

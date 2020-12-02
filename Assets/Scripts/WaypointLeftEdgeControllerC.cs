@@ -6,7 +6,7 @@ public class WaypointLeftEdgeControllerC : MonoBehaviour
 {
     //public bool trainPassingTransform; // bool for if the train is passing the transform or not
 
-    public AudioSource audioSource;
+    AudioSource audioSource;
     public AudioClip edgeConnectionClip;
 
     public Transform closestEdge; // Reference to the closest edge from another tile next to this transform

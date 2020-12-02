@@ -473,7 +473,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 0.2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &7354106199887039350
 Rigidbody:
@@ -503,6 +503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d50579edfd65ec244afafc19ec074b90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  edgeConnectionClip: {fileID: 8300000, guid: 03ef17d4f519a554e94d61e757c78288, type: 3}
   closestEdge: {fileID: 0}
   centre: {fileID: 1068875434251090962}
   left: {fileID: 6393727251428790646}
@@ -580,6 +581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f129432dfff704eba111c5cb89ad17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  edgeConnectionClip: {fileID: 8300000, guid: 03ef17d4f519a554e94d61e757c78288, type: 3}
   closestEdge: {fileID: 0}
   right: {fileID: 135051070821870699}
   centre: {fileID: 1068875434251090962}
