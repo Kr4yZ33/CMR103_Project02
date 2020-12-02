@@ -18,13 +18,6 @@ public class WaypointLeftEdgeControllerC : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    private void FixedUpdate()
-    {
-        if (closestEdge == null)
-        {
-            closestEdge = gameObject.transform;
-        }
-    }
     void OnTriggerEnter(Collider other)
     {
         //if (trainPassingTransform == true)
