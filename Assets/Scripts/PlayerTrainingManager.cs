@@ -4,12 +4,29 @@ using UnityEngine;
 
 public class PlayerTrainingManager : MonoBehaviour
 {
+    public bool leftEdgeConnected;
+    public bool rightEdgeConnected;
+    public bool trainingCompleted;
+
     public GameObject leftTrackGap;
     public GameObject rightTrackGap;
     public GameObject guideText;
 
     public AudioClip trainingAudioClip;
     public AudioSource audioSource;
+
+    private void FixedUpdate()
+    {
+        if(trainingCompleted == true)
+        {
+            FinishPlayerTraining();
+        }
+        
+        if(leftEdgeConnected == true && rightEdgeConnected == true)
+        {
+            trainingCompleted = true;
+        }
+    }
 
     public void StartPlayerTraining()
     {
@@ -24,7 +41,7 @@ public class PlayerTrainingManager : MonoBehaviour
         guideText.SetActive(true);
     }
 
-    public void DisableTrackGapGuides()
+    public void FinishPlayerTraining()
     {
         leftTrackGap.SetActive(false);
         rightTrackGap.SetActive(false);

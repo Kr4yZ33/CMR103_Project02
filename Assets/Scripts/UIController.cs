@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
+    public PlayerTrainingManager playerTrainingManager;
+    
     public GameObject uIControls;
 
     private void OnTriggerEnter(Collider other)
@@ -11,6 +13,7 @@ public class UIController : MonoBehaviour
         if(other.CompareTag("RightHand"))
         {
             uIControls.SetActive(false);
+            playerTrainingManager.StartPlayerTraining();
         }
     }
 
