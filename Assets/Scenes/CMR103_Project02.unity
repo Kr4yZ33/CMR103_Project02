@@ -3231,6 +3231,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Wep_WaterPistol_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1121525155587680, guid: c6865c562fd3f2841a92dc0cbbd6b4b4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4764624344734074, guid: c6865c562fd3f2841a92dc0cbbd6b4b4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.709
@@ -16597,6 +16601,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Wep_Watergun_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1607291360844622, guid: f528363d2aaa5d748ab9fcd16b601236, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4550259107800822, guid: f528363d2aaa5d748ab9fcd16b601236, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.706
@@ -18547,7 +18555,7 @@ PrefabInstance:
     - target: {fileID: 2199152789509337122, guid: 2c6139628bf17834f84d427befedb9f0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3473
+      value: 1.328
       objectReference: {fileID: 0}
     - target: {fileID: 2199152789509337122, guid: 2c6139628bf17834f84d427befedb9f0,
         type: 3}
@@ -20555,6 +20563,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1354515015}
     m_Modifications:
+    - target: {fileID: 72773967905540027, guid: 07b3597cdd611134f80753f1e678402f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2683267584040846954, guid: 07b3597cdd611134f80753f1e678402f,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -41577,7 +41590,7 @@ PrefabInstance:
     - target: {fileID: 2199152789509337122, guid: 2c6139628bf17834f84d427befedb9f0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3473
+      value: 1.328
       objectReference: {fileID: 0}
     - target: {fileID: 2199152789509337122, guid: 2c6139628bf17834f84d427befedb9f0,
         type: 3}
@@ -48721,6 +48734,10 @@ PrefabInstance:
     - target: {fileID: 1311246062939086, guid: 787a31f2409a3f64c987faeb2a72ab86, type: 3}
       propertyPath: m_Name
       value: SM_Wep_Watergun_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1311246062939086, guid: 787a31f2409a3f64c987faeb2a72ab86, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4691987367314160, guid: 787a31f2409a3f64c987faeb2a72ab86, type: 3}
       propertyPath: m_LocalPosition.x
@@ -66818,7 +66835,7 @@ PrefabInstance:
     - target: {fileID: 2199152789509337122, guid: 2c6139628bf17834f84d427befedb9f0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3473
+      value: 1.328
       objectReference: {fileID: 0}
     - target: {fileID: 2199152789509337122, guid: 2c6139628bf17834f84d427befedb9f0,
         type: 3}
@@ -70310,7 +70327,7 @@ PrefabInstance:
     - target: {fileID: 2199152789509337122, guid: 2c6139628bf17834f84d427befedb9f0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3473
+      value: 1.328
       objectReference: {fileID: 0}
     - target: {fileID: 2199152789509337122, guid: 2c6139628bf17834f84d427befedb9f0,
         type: 3}
