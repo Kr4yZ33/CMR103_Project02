@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 4983723198411793490}
   - component: {fileID: 4983723198411793489}
   - component: {fileID: 4983723198411793501}
+  - component: {fileID: 1921147995749055697}
   m_Layer: 8
   m_Name: TrackStraight
   m_TagString: Untagged
@@ -216,10 +217,32 @@ MonoBehaviour:
       m_Calls: []
   m_OnHoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1921147995749055697}
+        m_MethodName: MakeGrey
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnHoverExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1921147995749055697}
+        m_MethodName: MakeYellow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnLastHoverExited:
     m_PersistentCalls:
       m_Calls: []
@@ -271,6 +294,18 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_GravityOnDetach: 0
   m_RetainTransformParent: 0
+--- !u!114 &1921147995749055697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4983723198411793494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c15609c7e421f498681d9aa05fc71d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4983723199136035173
 GameObject:
   m_ObjectHideFlags: 0
