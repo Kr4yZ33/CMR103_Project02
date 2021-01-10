@@ -33,11 +33,11 @@ public class AudioManager : MonoBehaviour
         // if there is no previous track
         if (currentTrack == hornClip)
         {
-            return;
+            return; // exit script
         }
-        else
+        else // otherwise
         {
-            audioSource.PlayOneShot(hornClip, volume);
+            audioSource.PlayOneShot(hornClip, volume); // play the horn clip
         }
     }
 
