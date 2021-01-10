@@ -4,66 +4,69 @@ using UnityEngine;
 
 public class WaypointLeftEdgeController : MonoBehaviour
 {
-    //public bool trainPassingTransform; // bool for if the train is passing the transform or not
-    AudioSource audioSource;
-    public AudioClip edgeConnectionClip;
+
+    public HapticsController hapticsController; // Reference to the Haptics Controller Script
+    public bool trainPassingTransform; // bool for if the train is passing the transform or not
 
     public Transform closestEdge; // Reference to the closest edge from another tile next to this transform
     public Transform right; // reference to the right edge transform of the track tile
     public Transform left; // reference to the left edge transform of the track tile
 
-    private void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
-
+    /// <summary>
+    /// on trigger enter
+    /// </summary>
+    /// <param name="other"></param>
     void OnTriggerEnter(Collider other)
     {
-        //if (trainPassingTransform == true)
-        //{
-            //return;
-
-        //}
-        if (other.CompareTag("Train"))
+        if (trainPassingTransform == true) // if the bool for train passing transform is true
         {
-            TrainController script = other.gameObject.GetComponent<TrainController>();
+            return; // exit
 
-            if (script.previousTarget == null)
-            {
-                script.previousTarget = left;
-                script.currentTarget = right;
-            }
+        }
+        if (other.CompareTag("Train")) // if the object colliding with us is tagged Train
+        {
+            TrainController script = other.gameObject.GetComponent<TrainController>(); // access the game object and get the train controller script from it (saves us having to assign manually)
 
-            if (script.previousTarget != right)
+            if (script != null && script.previousTarget != right) // if the train controller's previous target was not the right transform
             {
-                script.previousTarget = left;
-                script.currentTarget = right;
-                //trainPassingTransform = true;
+                script.previousTarget = left; // set the previous target on the train controller script to the left transform
+                script.currentTarget = right; // set the current target on the train controller script to the right transform of the track tile
+                trainPassingTransform = true; // set the train passing transform bool to true
             }
-            if (script.previousTarget == right)
+            if (script != null && script.previousTarget == right) // if the previous target on the train controller script is the right transform
             {
-                script.previousTarget = left;
-                script.currentTarget = closestEdge;
-                //trainPassingTransform = true;
+                script.previousTarget = left; // set the previous target on the train controller script to the left transform
+                trainPassingTransform = true; // set the train passing transform bool to true
+                if (closestEdge != null)
+                {
+                    script.currentTarget = closestEdge; // set the current target on the train controller script to the closest edge transform of the track tile
+                }
             }
         }
 
-        if (other.CompareTag("TrackEdge"))
+        if (other.CompareTag("TrackEdge")) // if the thing colliding with us is tagged TrackEdge
         {
-            closestEdge = other.transform;
-            audioSource.PlayOneShot(edgeConnectionClip);
+            closestEdge = other.transform; // set the closest edge transform to the transform of the object that just collided with us.
+            hapticsController.trackConnected = true; // set the bool for track connected to true on the  haptics controller script
+            hapticsController.PlayTrackConnectionClip(); // call the function to play the track connection clip fom the haptics controller script
         }
     }
 
+    /// <summary>
+    /// on trigger exit
+    /// </summary>
+    /// <param name="other"></param>
     void OnTriggerExit(Collider other)
     {
-        //if (other.CompareTag("Train"))
-        //{
-            //trainPassingTransform = false;
-        //}
-        if (other.CompareTag("TrackEdge"))
+        if (other.CompareTag("Train")) // if the thing leaving out collider is tagged Train
         {
-            closestEdge = null;
+            trainPassingTransform = false; // set the train passing bool transfor to false
+        }
+        if (other.CompareTag("TrackEdge")) // if the thing leaving out collider is tagged TrackEdge
+        {
+            closestEdge = null; // set the closest edge to null
+            hapticsController.trackConnected = false; // set the bool for trackj connected to true on the  haptics controller script
+            hapticsController.trackConnectClipPlayed = false; // set the bool for track connect clip played to true on the  haptics controller script
         }
 
     }

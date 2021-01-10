@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 4983723198411793489}
   - component: {fileID: 4983723198411793501}
   - component: {fileID: 1921147995749055697}
+  - component: {fileID: 1460291047325773332}
   m_Layer: 8
   m_Name: TrackStraight
   m_TagString: Untagged
@@ -306,6 +307,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c15609c7e421f498681d9aa05fc71d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1460291047325773332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4983723198411793494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 114dcdc47eaeffe45b7db843dfc85c21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  trackConnected: 0
+  trackConnectedRhand: 0
+  trackConnectedLhand: 0
+  isHeld: 0
+  trackConnectClipPlayed: 0
+  trackConnectedClip: {fileID: 8300000, guid: 03ef17d4f519a554e94d61e757c78288, type: 3}
+  volume: 0.7
 --- !u!1 &4983723199136035173
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,7 +372,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86ee1a10b42850140b2532268bbf11f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  edgeConnectionClip: {fileID: 8300000, guid: 03ef17d4f519a554e94d61e757c78288, type: 3}
+  hapticsController: {fileID: 1460291047325773332}
+  trainPassingTransform: 0
   closestEdge: {fileID: 0}
   right: {fileID: 4983723199229553384}
   left: {fileID: 4983723199136035174}
@@ -429,7 +451,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a874f21bdcd1bd4e816533dd9ebec75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  edgeConnectionClip: {fileID: 8300000, guid: 03ef17d4f519a554e94d61e757c78288, type: 3}
+  hapticsController: {fileID: 1460291047325773332}
+  trainPassingTransform: 0
   closestEdge: {fileID: 0}
   right: {fileID: 4983723199229553384}
   left: {fileID: 4983723199136035174}
