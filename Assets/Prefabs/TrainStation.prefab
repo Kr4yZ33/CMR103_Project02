@@ -229,7 +229,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a874f21bdcd1bd4e816533dd9ebec75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  edgeConnectionClip: {fileID: 8300000, guid: 03ef17d4f519a554e94d61e757c78288, type: 3}
+  hapticsController: {fileID: 6073467431375605540}
+  trainPassingTransform: 0
   closestEdge: {fileID: 0}
   right: {fileID: 5300535227209517861}
   left: {fileID: 1797660802733664021}
@@ -290,7 +291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86ee1a10b42850140b2532268bbf11f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  edgeConnectionClip: {fileID: 8300000, guid: 03ef17d4f519a554e94d61e757c78288, type: 3}
+  hapticsController: {fileID: 6073467431375605540}
+  trainPassingTransform: 0
   closestEdge: {fileID: 0}
   right: {fileID: 5300535227209517861}
   left: {fileID: 1797660802733664021}
@@ -308,6 +310,7 @@ GameObject:
   - component: {fileID: 3056280430071166505}
   - component: {fileID: 8207625517563102681}
   - component: {fileID: 8207625517563102680}
+  - component: {fileID: 6073467431375605540}
   m_Layer: 8
   m_Name: TrainStation
   m_TagString: Untagged
@@ -487,3 +490,23 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_GravityOnDetach: 0
   m_RetainTransformParent: 0
+--- !u!114 &6073467431375605540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8207625517563102683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 114dcdc47eaeffe45b7db843dfc85c21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  trackConnected: 0
+  trackConnectedRhand: 0
+  trackConnectedLhand: 0
+  isHeld: 0
+  trackConnectClipPlayed: 0
+  trackConnectedClip: {fileID: 8300000, guid: 03ef17d4f519a554e94d61e757c78288, type: 3}
+  volume: 0.7

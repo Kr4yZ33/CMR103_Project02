@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2718609337344210682}
   - component: {fileID: 805955496217633385}
   - component: {fileID: 805955496217633384}
+  - component: {fileID: 646636799943249288}
   m_Layer: 8
   m_Name: TrackCorner
   m_TagString: Untagged
@@ -194,6 +195,26 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_GravityOnDetach: 0
   m_RetainTransformParent: 0
+--- !u!114 &646636799943249288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805955496217633391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 114dcdc47eaeffe45b7db843dfc85c21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  trackConnected: 0
+  trackConnectedRhand: 0
+  trackConnectedLhand: 0
+  isHeld: 0
+  trackConnectClipPlayed: 0
+  trackConnectedClip: {fileID: 8300000, guid: 03ef17d4f519a554e94d61e757c78288, type: 3}
+  volume: 0.7
 --- !u!1 &3125098247653975723
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,7 +233,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1068875434251090962
 Transform:
   m_ObjectHideFlags: 0
@@ -441,6 +462,7 @@ GameObject:
   - component: {fileID: 3211886316436093441}
   - component: {fileID: 7354106199887039350}
   - component: {fileID: 7166002335308249810}
+  - component: {fileID: 2589758338694406116}
   m_Layer: 8
   m_Name: LeftTransform
   m_TagString: TrackEdge
@@ -498,7 +520,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6622391529603529415}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d50579edfd65ec244afafc19ec074b90, type: 3}
   m_Name: 
@@ -506,6 +528,23 @@ MonoBehaviour:
   edgeConnectionClip: {fileID: 8300000, guid: 03ef17d4f519a554e94d61e757c78288, type: 3}
   closestEdge: {fileID: 0}
   centre: {fileID: 1068875434251090962}
+  left: {fileID: 6393727251428790646}
+--- !u!114 &2589758338694406116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6622391529603529415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ee1a10b42850140b2532268bbf11f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hapticsController: {fileID: 646636799943249288}
+  trainPassingTransform: 0
+  closestEdge: {fileID: 0}
+  right: {fileID: 135051070821870699}
   left: {fileID: 6393727251428790646}
 --- !u!1 &7034607834248519609
 GameObject:
@@ -519,6 +558,7 @@ GameObject:
   - component: {fileID: 2362747854591722704}
   - component: {fileID: 4143371200367655304}
   - component: {fileID: 4561464980876264470}
+  - component: {fileID: 4651711501637115833}
   m_Layer: 8
   m_Name: RightTransform
   m_TagString: TrackEdge
@@ -576,7 +616,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7034607834248519609}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1f129432dfff704eba111c5cb89ad17, type: 3}
   m_Name: 
@@ -585,3 +625,20 @@ MonoBehaviour:
   closestEdge: {fileID: 0}
   right: {fileID: 135051070821870699}
   centre: {fileID: 1068875434251090962}
+--- !u!114 &4651711501637115833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7034607834248519609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a874f21bdcd1bd4e816533dd9ebec75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hapticsController: {fileID: 646636799943249288}
+  trainPassingTransform: 0
+  closestEdge: {fileID: 0}
+  right: {fileID: 135051070821870699}
+  left: {fileID: 6393727251428790646}
